@@ -5,6 +5,10 @@ import { mintNFT } from "../cadence/transactions/mintNFT";
 import { getTotalSupply } from "../cadence/scripts/getTotalSupply";
 import { getIDs } from "../cadence/scripts/getID";
 import { getMetadata } from "../cadence/scripts/getMetadata";
+import { LoginFlowButton } from "../components/Shared/FlowLoginButton";
+import { LogoutFlowButton } from "../components/Shared/FlowLogoutButton";
+import { MintRewardButton } from "../components/Shared/FlowMintButton";
+import { UserRewardsMinted } from "../components/Shared/FlowUserRewards";
 import Link from "next/link";
 import { useRouter } from 'next/router'; 
 import { Inter } from 'next/font/google'
@@ -22,7 +26,7 @@ fcl.config({
 export default function Reward() {
     const router = useRouter();
     const [user, setUser] = useState<any>();
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState<any>();
 
     const logInFlowNetwork = () => {
         fcl.authenticate();
@@ -33,59 +37,6 @@ export default function Reward() {
         fcl.unauthenticate();
     };
 
-    const RenderLogoutFlowButton = () => {
-        if (user && user.addr) {
-          return (
-            <div className="inline-flex gap-2">
-              <button className="text-xs bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded mb-3" onClick={() => logOutFlowNetwork()}>
-                Logout
-              </button>
-              <button className="text-xs bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded mb-3" onClick={() => router.push('/')}>
-                Go Back
-              </button>
-            </div>
-          );
-        }
-        return undefined;
-      };
-
-    const RenderLoginFlowButton = () => {
-        return (
-          <div>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded" onClick={() => logInFlowNetwork()}>
-              Log In
-            </button>
-          </div>
-        );
-    };
-    
-    const RenderMintReward = () => {
-        return (
-          <div>
-            <div>
-              <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded" onClick={() => mintFlowNft()}>
-                Mint Reward
-              </button>
-            </div>
-          </div>
-        );
-    };
-
-
-    const RenderRewardsMinted = () => {
-
-        return (
-            <div className="mt-6">
-            <h2 className="text-lg">Your NFT Rewards</h2>
-            {images.length > 0 ? (
-                <div className="grid grid-cols-2 gap-1">{images}</div>
-            ) : (
-            ""
-            )}
-            </div>
-        )
-
-    }
 
     const fetchRewards = async () => {
         // Empty the images array
@@ -102,7 +53,7 @@ export default function Reward() {
           console.log("No NFTs Rewards yet");
         }
     
-        let nft_mediaSource = [];
+        let nft_mediaSource: any = [];
         try {
           for (let i = 0; i < IDs.length; i++) {
             const result = await fcl.query({
@@ -226,22 +177,22 @@ export default function Reward() {
             <div className="mb-8 w-full">
                 <h2 className="text-base pb-3">Click button bellow to mint your reward</h2>
                 <div className="rounded-lg bg-gray-200 p-4 text-center">
-                <RenderMintReward />
+                <MintRewardButton mintFlowNft={mintFlowNft} />
                 </div>
 
-                <RenderRewardsMinted />
+                <UserRewardsMinted images={images} />
 
             </div>) 
             :(
                 <div className="mb-8 w-full text-center">
                 <h2 className="text-base pb-3">Connect to Flow network receive your reward!</h2>
                 <div className="rounded-lg bg-gray-200 p-4 text-center">
-                <RenderLoginFlowButton />
+                <LoginFlowButton logInFlowNetwork={logInFlowNetwork} />
                 </div>
             </div>                
             )}
 
-            <RenderLogoutFlowButton />
+            <LogoutFlowButton user={user} router={router} logOutFlowNetwork={logOutFlowNetwork} />
 
             </div>
             </div>

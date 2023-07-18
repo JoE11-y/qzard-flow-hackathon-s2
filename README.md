@@ -1,8 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Flow Qzard v0.1.0
 
-## Getting Started
+<p align="center">
+  <img src="https://pngimg.com/uploads/treasure_chest/treasure_chest_PNG21.png?raw=true" width="33%" alt="Flow Qzard"></a>
+</p>
 
-First, run the development server:
+🏆 1001+ quizzes to challenge you and your friends knowledge on all topics and receive rewards.
+
+
+## Demo
+
+### [https://qzard.open4glabs.xyz/](https://qzard.open4glabs.xyz/)
+
+## Requirements
+
+- Node.js 18+
+
+## Getting started
+
+Run the following command on your local environment:
+
+``` bash
+git clone https://github.com/QSTN-US/qzard-flow-hackathon-s2 qzard
+cd qzard
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, you can run locally:
 
 ```bash
 npm run dev
@@ -12,27 +39,21 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your favorite browser to see your project.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Deploy to production
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+You can see the results locally in production mode with:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build
+npm run start
+# or
+yarn build
+yarn start
+# or
+pnpm build
+pnpm start
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
