@@ -1,0 +1,330 @@
+.sd-root-modern--mobile {
+    background-color: transparent;
+  }
+  
+  .sd-root-modern:not(.svc-tab-designer) .sd-container-modern__title {
+    font-family: '__Inter_20951f', '__Inter_Fallback_20951f';
+    background-color: transparent;
+  }
+  
+  .sd-body.sd-body--static {
+    margin-top: -80px;
+  }
+  
+  .sd-container-modern {
+    margin-bottom: 0px;
+  }
+  
+  .sd-logo__image, .sd-header__text {
+    display:none;
+  }
+  
+  
+   .sd-title, 
+   .sd-container-modern__title {
+    font-family: '__Inter_20951f', '__Inter_Fallback_20951f';
+    background-color: transparent;
+   }
+  
+   .sd-title.sd-container-modern__title {
+    box-shadow: none;
+   }
+  
+  .sd-title {
+    text-align: center;
+    font-family: '__Inter_20951f', '__Inter_Fallback_20951f';
+    /*color: #6b6bff;*/
+  }
+  
+  .sd-header__text .sd-title {
+    color: #6b6bff;
+  }
+  
+  .sd-page__title {
+    text-align: center;
+    font-family: '__Inter_20951f', '__Inter_Fallback_20951f';
+    color: #6b6bff;
+  }
+  
+  .sv-title-actions__title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .sv-title-actions {
+    display:none;
+  }
+  
+  span.sd-element__num {
+    font-weight: bold;
+  }
+  
+  .sd-progress,
+  .sd-body__progress, 
+  .sd-body__progress--top {
+    position: relative;
+    height: 16px;
+    top: -189px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    z-index: 105;
+  }
+  
+  .sd-progress__bar {
+    height: 16px;
+    background-color: #6b6bff;
+    border-radius: 6px;
+    z-index: 105;
+  }
+  
+  .sd-progress__text {
+    right: 1px;
+    color: #515151;
+    top: -27px;
+    z-index: 105;
+  }
+  
+  .sd-page__row.sd-row {
+    margin-top: 0px;
+  }
+  
+  .svc-logic-question-value, .sd-element--with-frame:not(.sd-element--collapsed) {
+    font-family: '__Inter_20951f', '__Inter_Fallback_20951f';
+    box-shadow: none;
+    background-color: transparent;
+  }
+  
+  .sv-string-viewer {
+    font-family: '__Inter_20951f', '__Inter_Fallback_20951f';
+  }
+  
+  
+  .sd-item--checked .sd-item__decorator {
+    background: #6b6bff;
+  }
+  
+  .sd-btn,
+  .sd-navigation__next-btn {
+    font-family: '__Inter_20951f', '__Inter_Fallback_20951f';
+    background: #6b6bff;
+    color: #ffffff;
+    border: #4242eb;
+  }
+  
+  .sd-btn:hover,
+  .sd-navigation__next-btn:hover {
+    font-family: '__Inter_20951f', '__Inter_Fallback_20951f';
+    background: #4242eb;
+    color: #ffffff;
+    border: #6b6bff;
+  }
+  
+  .sd-btn:not(:disabled):hover {
+    background-color: #4242eb;
+  }
+  
+  .sd-action-bar {
+    justify-content: right;
+    margin-bottom: 16px;
+  }
+  
+  
+  /** Mobile **/
+  @media screen and (max-device-width: 767px) and (orientation: portrait) {
+  
+    .sd-container-modern {
+      margin-bottom: 6px;
+      background-color: white;
+    }
+  
+    .sd-progress,
+    .sd-body__progress, 
+    .sd-body__progress--top {
+      position: relative;
+      height: 16px;
+      top: -169px;
+      border-radius: 8px;
+      background-color: #ffffff;
+    }
+  
+    .sd-progress__bar {
+      height: 16px;
+      background-color: #6b6bff;
+      border-radius: 6px;
+    }
+  
+    .sd-progress__text {
+      right: 1px;
+      color: #515151;
+      top: -27px;
+    }
+  
+    .sv-title-actions__title {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  
+    span.sd-element__num {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  
+  
+    .sd-logo__image, .sd-header__text {
+        display:none;
+    }
+  
+    .sv-title-actions {
+        display:none;
+    }
+  
+  
+  }
+  
+  @media screen and (max-device-width: 767px) and (orientation: landscape) {
+  
+    .sd-container-modern {
+      margin-bottom: 6px;
+      background-color: white;
+    }
+  
+    .sd-progress,
+    .sd-body__progress, 
+    .sd-body__progress--top {
+      position: relative;
+      height: 16px;
+      top: -169px;
+      border-radius: 8px;
+      background-color: #ffffff;
+    }
+  
+    .sd-progress__bar {
+      height: 16px;
+      background-color: #6b6bff;
+      border-radius: 6px;
+    }
+  
+    .sd-progress__text {
+      right: 1px;
+      color: #515151;
+      top: -27px;
+    }
+  
+    .sv-title-actions__title {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  
+    span.sd-element__num {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  
+    .sd-logo__image, .sd-header__text {
+        display:none;
+    }
+    .sv-title-actions {
+        display:none;
+    }
+  
+  }
+  
+  /** Tablet (portrait) **/
+  @media only screen and (max-device-width : 1024px) and (orientation : portrait) {
+  
+    .sd-container-modern {
+      margin-bottom: 6px;
+      background-color: white;
+    }
+  
+    .sd-progress,
+    .sd-body__progress, 
+    .sd-body__progress--top {
+      position: relative;
+      height: 16px;
+      top: -169px;
+      border-radius: 8px;
+      background-color: #ffffff;
+    }
+  
+    .sd-progress__bar {
+      height: 16px;
+      background-color: #6b6bff;
+      border-radius: 6px;
+    }
+  
+    .sd-progress__text {
+      right: 1px;
+      color: #515151;
+      top: -27px;
+    }
+  
+    .sv-title-actions__title {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  
+    span.sd-element__num {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  
+  
+    .sd-logo__image, .sd-header__text {
+        display:none;
+    }
+    .sv-title-actions {
+        display:none;
+    }
+  
+  
+  }
+  
+  
+  /** Tablet (landscape) **/
+  @media only screen and (max-device-width : 1024px) and (orientation : landscape) {
+  
+    .sd-container-modern {
+      margin-bottom: 6px;
+      background-color: white;
+    }
+  
+    .sd-progress,
+    .sd-body__progress, 
+    .sd-body__progress--top {
+      position: relative;
+      height: 16px;
+      top: -169px;
+      border-radius: 8px;
+      background-color: #ffffff;
+    }
+  
+    .sd-progress__bar {
+      height: 16px;
+      background-color: #6b6bff;
+      border-radius: 6px;
+    }
+  
+    .sd-progress__text {
+      right: 1px;
+      color: #515151;
+      top: -27px;
+    }
+  
+    .sv-title-actions__title {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  
+    span.sd-element__num {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  
+    .sd-logo__image, .sd-header__text {
+        display:none;
+    }
+    .sv-title-actions {
+        display:none;
+    }
+  
+  }
